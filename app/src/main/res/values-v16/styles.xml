@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:textViewStyle">@style/EdenTextView</item>
+    </style>
+
+    <style name="EdenTextView" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@string/typeface_museo_sans</item>
+    </style>
+
+</resources>

@@ -1,0 +1,30 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Video Thumbnail -->
+    <com.google.android.youtube.player.YouTubeThumbnailView
+        android:id="@+id/imageView_thumbnail"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/black"
+        android:layout_alignParentLeft="true"/>
+
+
+    <!-- Video Title -->
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageView_thumbnail"
+        android:layout_alignTop="@id/imageView_thumbnail"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/video_list_title"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"/>
+
+</RelativeLayout>
