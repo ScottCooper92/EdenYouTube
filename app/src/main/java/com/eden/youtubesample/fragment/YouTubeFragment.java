@@ -65,16 +65,6 @@ public class YouTubeFragment extends YouTubePlayerSupportFragment implements You
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean restored) {
 
-        //Here we can set some flags on the player
-
-        //This flag tells the player to switch to landscape when in fullscreen, it will also return to portrait
-        //when leaving fullscreen
-        youTubePlayer.setFullscreenControlFlags(YouTubePlayer.FULLSCREEN_FLAG_CONTROL_ORIENTATION);
-
-        //This flag controls the system UI such as the status and navigation bar, hiding and showing them
-        //alongside the player UI
-        youTubePlayer.addFullscreenControlFlag(YouTubePlayer.FULLSCREEN_FLAG_CONTROL_SYSTEM_UI);
-
         if (mVideoId != null) {
             if (restored) {
                 youTubePlayer.play();

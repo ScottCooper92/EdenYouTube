@@ -43,6 +43,10 @@ public class YouTubeActivity extends YouTubeBaseActivity implements YouTubePlaye
         //when leaving fullscreen
         youTubePlayer.setFullscreenControlFlags(YouTubePlayer.FULLSCREEN_FLAG_CONTROL_ORIENTATION);
 
+        //This flag tells the player to automatically enter fullscreen when in landscape. Since we don't have
+        //landscape layout for this activity, this is a good way to allow the user rotate the video player.
+        youTubePlayer.addFullscreenControlFlag(YouTubePlayer.FULLSCREEN_FLAG_ALWAYS_FULLSCREEN_IN_LANDSCAPE);
+
         //This flag controls the system UI such as the status and navigation bar, hiding and showing them
         //alongside the player UI
         youTubePlayer.addFullscreenControlFlag(YouTubePlayer.FULLSCREEN_FLAG_CONTROL_SYSTEM_UI);
