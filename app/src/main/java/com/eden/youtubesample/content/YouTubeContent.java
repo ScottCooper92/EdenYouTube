@@ -24,13 +24,13 @@ public class YouTubeContent {
 
     static {
         addItem(new YouTubeVideo("tttG6SdnCd4", "Open in the YouTube App"));
-        addItem(new YouTubeVideo("efdX9U8NPB4", "Open in the YouTube App in fullscreen"));
+        addItem(new YouTubeVideo("x-hH_Txxzls", "Open in the YouTube App in fullscreen"));
         addItem(new YouTubeVideo("TTh_qYMzSZk", "Open in the Standalone player in fullscreen"));
         addItem(new YouTubeVideo("tttG6SdnCd4", "Open in the Standalone player in \"Light Box\" mode"));
-        addItem(new YouTubeVideo("efdX9U8NPB4", "Open in the YouTubeFragment"));
+        addItem(new YouTubeVideo("x-hH_Txxzls", "Open in the YouTubeFragment"));
         addItem(new YouTubeVideo("TTh_qYMzSZk", "Hosting the YouTubeFragment in an Activity"));
         addItem(new YouTubeVideo("tttG6SdnCd4", "Open in the YouTubePlayerView"));
-        addItem(new YouTubeVideo("efdX9U8NPB4", "Custom \"Light Box\" player with fullscreen handling"));
+        addItem(new YouTubeVideo("x-hH_Txxzls", "Custom \"Light Box\" player with fullscreen handling"));
         addItem(new YouTubeVideo("TTh_qYMzSZk", "Custom player controls"));
     }
 
