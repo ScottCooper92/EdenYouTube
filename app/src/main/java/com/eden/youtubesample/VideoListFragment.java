@@ -56,14 +56,20 @@ public class VideoListFragment extends ListFragment {
                 }
                 break;
             case 2:
-                //Opens in the StandAlonePlayer, defaults to fullscreen
-                startActivity(YouTubeStandalonePlayer.createVideoIntent(getActivity(),
-                        DEVELOPER_KEY, video.id));
+                //Issue #3 - Need to resolve StandalonePlayer as well
+                if (YouTubeIntents.canResolvePlayVideoIntent(getActivity())) {
+                    //Opens in the StandAlonePlayer, defaults to fullscreen
+                    startActivity(YouTubeStandalonePlayer.createVideoIntent(getActivity(),
+                            DEVELOPER_KEY, video.id));
+                }
                 break;
             case 3:
-                //Opens in the StandAlonePlayer but in "Light box" mode
-                startActivity(YouTubeStandalonePlayer.createVideoIntent(getActivity(),
-                        DEVELOPER_KEY, video.id, 0, true, true));
+                //Issue #3 - Need to resolve StandalonePlayer as well
+                if (YouTubeIntents.canResolvePlayVideoIntentWithOptions(getActivity())) {
+                    //Opens in the StandAlonePlayer but in "Light box" mode
+                    startActivity(YouTubeStandalonePlayer.createVideoIntent(getActivity(),
+                            DEVELOPER_KEY, video.id, 0, true, true));
+                }
                 break;
             case 4:
                 //Opens in the YouTubeSupportFragment
