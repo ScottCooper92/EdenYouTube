@@ -65,20 +65,20 @@ public class VideoListFragment extends ListFragment {
         switch (position) {
             case 0:
                 //Check whether we can actually open YT
-                if (YouTubeIntents.canResolvePlayVideoIntent(getActivity())) {
+                if (YouTubeIntents.canResolvePlayVideoIntent(context)) {
                     //Opens the video in the YouTube app
                     startActivity(YouTubeIntents.createPlayVideoIntent(context, video.id));
                 }
                 break;
             case 1:
-                if (YouTubeIntents.canResolvePlayVideoIntentWithOptions(getActivity())) {
+                if (YouTubeIntents.canResolvePlayVideoIntentWithOptions(context)) {
                     //Opens in the YouTube app in fullscreen and returns to this app once the video finishes
                     startActivity(YouTubeIntents.createPlayVideoIntentWithOptions(context, video.id, true, true));
                 }
                 break;
             case 2:
                 //Issue #3 - Need to resolve StandalonePlayer as well
-                if (YouTubeIntents.canResolvePlayVideoIntent(getActivity())) {
+                if (YouTubeIntents.canResolvePlayVideoIntent(context)) {
                     //Opens in the StandAlonePlayer, defaults to fullscreen
                     startActivity(YouTubeStandalonePlayer.createVideoIntent(getActivity(),
                             DEVELOPER_KEY, video.id));
@@ -86,7 +86,7 @@ public class VideoListFragment extends ListFragment {
                 break;
             case 3:
                 //Issue #3 - Need to resolve StandalonePlayer as well
-                if (YouTubeIntents.canResolvePlayVideoIntentWithOptions(getActivity())) {
+                if (YouTubeIntents.canResolvePlayVideoIntentWithOptions(context)) {
                     //Opens in the StandAlonePlayer but in "Light box" mode
                     startActivity(YouTubeStandalonePlayer.createVideoIntent(getActivity(),
                             DEVELOPER_KEY, video.id, 0, true, true));
@@ -99,25 +99,25 @@ public class VideoListFragment extends ListFragment {
                 break;
             case 5:
                 //Opens in Custom Activity
-                final Intent fragIntent = new Intent(getActivity(), YouTubeFragmentActivity.class);
+                final Intent fragIntent = new Intent(context, YouTubeFragmentActivity.class);
                 fragIntent.putExtra(YouTubeFragmentActivity.KEY_VIDEO_ID, video.id);
                 startActivity(fragIntent);
                 break;
             case 6:
                 //Opens in the YouTubePlayerView
-                final Intent actIntent = new Intent(getActivity(), YouTubeActivity.class);
+                final Intent actIntent = new Intent(context, YouTubeActivity.class);
                 actIntent.putExtra(YouTubeActivity.KEY_VIDEO_ID, video.id);
                 startActivity(actIntent);
                 break;
             case 7:
                 //Opens in the the custom Lightbox activity
-                final Intent lightboxIntent = new Intent(getActivity(), CustomLightboxActivity.class);
+                final Intent lightboxIntent = new Intent(context, CustomLightboxActivity.class);
                 lightboxIntent.putExtra(CustomLightboxActivity.KEY_VIDEO_ID, video.id);
                 startActivity(lightboxIntent);
                 break;
             case 8:
                 //Custom player controls
-                final Intent controlsIntent = new Intent(getActivity(), CustomYouTubeControlsActivity.class);
+                final Intent controlsIntent = new Intent(context, CustomYouTubeControlsActivity.class);
                 controlsIntent.putExtra(CustomLightboxActivity.KEY_VIDEO_ID, video.id);
                 startActivity(controlsIntent);
                 break;
