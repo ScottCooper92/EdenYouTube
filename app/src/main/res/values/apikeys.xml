@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="DEVELOPER_KEY">This is where you should put your API key, you can get one from https://developers.google.com/youtube/v3/getting-started</string>
+
+</resources>

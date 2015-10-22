@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Eden - YouTube Example</string>
 
-    <string name="DEVELOPER_KEY">AIzaSyA9cbrHnyMsZllw-DRFFDXf7nwjm15lQ4s</string>
-
     <string name="video_list_title">Title</string>
     <string name="error_init_failure">Initialization failure: Unable to play video</string>
     <string name="youtube_activity_fragment_placeholder">The YouTube Fragment can be placed anywhere
