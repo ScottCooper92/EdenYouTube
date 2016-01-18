@@ -4,11 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import com.crashlytics.android.Crashlytics;
 import com.google.android.youtube.player.YouTubeApiServiceUtil;
 import com.google.android.youtube.player.YouTubeInitializationResult;
-
-import io.fabric.sdk.android.Fabric;
 
 /***********************************************************************************
  * The MIT License (MIT)
@@ -39,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

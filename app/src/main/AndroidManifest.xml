@@ -28,9 +28,6 @@
             android:theme="@style/AppTheme.Translucent" />
         <activity android:name=".CustomYouTubeControlsActivity" />
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="8fc0a41982c46d56bea1e25b534fdeb594fc3d82" />
     </application>
 
 </manifest>
